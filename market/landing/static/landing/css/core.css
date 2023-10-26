@@ -1,0 +1,43 @@
+:root{
+    --color:pink;  
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+
+.theme-color{
+    color: var(--color)
+}
+
+.ddv{
+    background: url("/static/landing/images/im.jpg") 50%  no-repeat ;
+    background-size: cover;
+    height: 25vh;
+}
+.ddv1{
+    background: url("/static/landing/images/im1.jpg") 50%  no-repeat ;
+    background-size: cover;
+    height: 25vh;
+}
+
+.parent{
+    position:relative
+}
+
+.child{
+    position: absolute;
+    top: -35px;
+    background-color: var(--color);
+    /* padding: 20px; */
+}
+
+.image-prop{
+    width: -webkit-fill-available;
+    width: -moz-available;
+    height: -webkit-fill-available;
+    height: -moz-available;
+}

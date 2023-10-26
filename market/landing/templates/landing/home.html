@@ -1,0 +1,218 @@
+{% extends "landing/base.html" %}
+{% load static %}
+
+
+{% block content %} 
+
+
+
+  <div class="ddv" style="min-height: 50vh; width: 100%;" >
+    <nav class="navbar bg-body-tertiary" >
+        <div class="container-fluid">
+          <a class="navbar-brand theme-color btn btn-secondary">Hanvler</a>
+          <a class="text-decoration-none theme-color btn btn-secondary"  href="#place-order">
+            Book now
+          </a>
+        </div>
+      </nav>
+  </div>
+
+  <div class="parent " >
+    <div class="row child d-flex justify-content-evenly" style="margin: 0;">
+        <div class="col-5 my-4">
+            <h3 class="text-center" >Experience fantasies you've always desired</h3>
+        </div>
+        <div class="col-5 my-4" >
+            <h3 class="text-center" >Find your happiness behind closed doors</h3>
+        </div>
+    </div>
+  </div> 
+  <div class="text-center" style="margin-top: 210px; margin-bottom: 50px;">
+    <h1>Scared of low performance?</h1>
+    <p class="px-3">
+        Don't worry you are in right place. We have solution of your every problem.
+    </p>
+  </div>
+
+
+  <div class="row mb-4" style="margin: 0;">
+    <div class="col-sm-4">
+        <img class="image-prop"  src="{% static 'landing/images/product1.jpg' %}" alt="">
+    </div>
+    <div class="col-sm-8 mt-4">
+        <h1 class="text-danger">Power Regainer</h1>
+        <p>Power Regainer is intended to improve men's sexual function. It is a combination of plenty of powerfull  herbs, and minerals that are required to maintain physical well-being as well as improve Libido, and boost fertility, stamina, and endurance. It also aids in the natural increase of testosterone levels, as well as the management of emotional stress and exhaustion. Increase Sex timimg also improve penile erection by increasing muscular strength.</p>
+          <p class="text-muted">Quantity : 1 month </p>
+          <p class="text-muted">Prise: ₹1300 </p>
+          <p class=""> 
+            <a class="text-decoration-none "  href="#place-order">
+            <button class="btn btn-secondary">
+              Book now
+            </button>
+          </a>
+         </p>
+    </div>
+  </div>
+
+  <div class="ddv1" style="min-height: 50vh; width: 100%;" >
+    
+
+    
+  </div>
+
+  <div class="row my-4" style="margin: 0;">
+    <div class="col-sm-8">
+        <h1 class="text-danger" >Stamina Booster</h1>
+        <p>
+          Stamina can mean many things, but when it comes to sex, it often refers to how long you can last in bed. If you’re unsatisfied with how quickly you do the deed , Stamina Booster could help you to increase your stamina and mmake your weapon as strong as Hammer.
+        </p>
+        <p class="text-muted">Quantity : 1 month </p>
+        <p class="text-muted">Prise: ₹900 </p>
+        <p class=""> 
+          <a class="text-decoration-none "  href="#place-order">
+          <button class="btn btn-secondary">
+            Book now
+          </button>
+        </a>
+       </p>
+    </div>
+    <div class="col-sm-4 mt-4">
+        <img class="image-prop"  src="{% static 'landing/images/product2.jpg' %}" alt="">
+    </div>
+  </div>
+
+ <div class="py-3 text-center bg-success  text-light">
+    
+  Our products come in natural powder form just take one spoon after meal to get good result.
+
+ </div>
+
+  <div id="place-order" class="order  p-3 mt-3" style="background-color: rgb(236, 236, 236);">
+    <h1 class="text-center">Book Now</h1>
+    <form class="row g-3" method="POST">
+      {% csrf_token %}
+        <div class="col-md-4">
+          <label for="inputEmail4" class="form-label">Name</label>
+          <input type="text" required  name="name" class="form-control" id="inputEmail4">
+        </div>
+        <div class="col-md-4">
+          <label for="inputPassword4" class="form-label">Mobile</label>
+          <input type="number" required name="number" placeholder="9876..." class="form-control" id="inputPassword4">
+        </div>
+        <div class="col-md-4">
+          <label for="inputPassword5" class="form-label">Alternative Mobile</label>
+          <input type="number" required name="alternative" placeholder="9876..." class="form-control" id="inputPassword5">
+        </div>
+        <div class="col-12">
+          <label for="inputAddress" class="form-label">Address</label>
+          <input type="text" required class="form-control" name="address1" id="inputAddress" placeholder="street">
+        </div>
+        <div class="col-12">
+          <label for="inputAddress2" class="form-label">Address 2</label>
+          <input type="text" required class="form-control" name="address2" id="inputAddress2" placeholder="Apartment, studio, or floor">
+        </div>
+        <div class="col-md-6">
+          <label for="inputCity" class="form-label">City</label>
+          <input type="text" required name="city"  class="form-control" id="inputCity">
+        </div>
+        <div class="col-md-6">
+          <label for="product" class="form-label">Product</label>
+          <select id="product"  required name="product" class="form-select">
+            <option selected>Select product</option>
+            <option value="ap1" selected>Power Regainer ₹1300</option>
+            <option value="ap7">Stamina Booster ₹900 </option>        
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label for="inputState" class="form-label">State</label>
+          <select id="inputState"  required name="state" class="form-select">
+            <option selected>Select state</option>
+            <option value="AP">Andhra Pradesh</option>
+            <option value="AR">Arunachal Pradesh</option>
+            <option value="AS">Assam</option>
+            <option value="BR">Bihar</option>
+            <option value="CH">Chandigarh</option>
+            <option value="CT">Chhattisgarh</option>
+            <option value="DL">Delhi</option>
+            <option value="GA">Goa</option>
+            <option value="GJ">Gujarat</option>
+            <option value="HR">Haryana</option>
+            <option value="HP">Himachal Pradesh</option>
+            <option value="JK">Jammu and Kashmir</option>
+            <option value="JH">Jharkhand</option>
+            <option value="KA">Karnataka</option>
+            <option value="KL">Kerala</option>
+            <option value="LA">Ladakh</option>
+            <option value="MP">Madhya Pradesh</option>
+            <option value="MH">Maharashtra</option>
+            <option value="MN">Manipur</option>
+            <option value="ML">Meghalaya</option>
+            <option value="MZ">Mizoram</option>
+            <option value="NL">Nagaland</option>
+            <option value="OR">Odisha</option>
+            <option value="PY">Puducherry</option>
+            <option value="PB">Punjab</option>
+            <option value="RJ">Rajasthan</option>
+            <option value="SK">Sikkim</option>
+            <option value="TN">Tamil Nadu</option>
+            <option value="TG">Telangana</option>
+            <option value="TR">Tripura</option>
+            <option value="UP">Uttar Pradesh</option>
+            <option value="UT">Uttarakhand</option>
+            <option value="WB">West Bengal</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label for="inputZip" class="form-label">Zip</label>
+          <input type="text" required name="zip" class="form-control" id="inputZip">
+        </div>
+
+        <div class="col-md-4">
+          <label for="inputZip" class="form-label">Payment Mode</label>
+          <select id="Payment-mode"  required name="payment_mode" class="form-select">
+            <option value="PPD" selected>Online</option>      
+            <option value="COD" >Cash on delivery</option>
+          </select>
+        </div>
+        <p class="d-block  px-3 text-success">| Free Delivery |</p>
+        <p id="cod-amount" class=" d-none  px-3 text-primary">| ₹100 is compulsary to proceed your COD order It will be deducted from your Order amount |</p>
+
+        <div class="col-12">
+          <button type="submit" class="btn btn-secondary">Placer Order</button>
+        </div>
+      </form>
+  </div>
+
+  <div class="footer py-3 theme-color text-center bg-dark">
+    <p>HANVLER All Rights Reserverd 2023</p>
+  </div>
+
+
+{% endblock content %}
+
+{% block js %}
+
+{{ block.super }}
+<script>
+
+    if($('#Payment-mode').val() == 'COD'){
+      $('#cod-amount').removeClass('d-none').addClass('d-block')
+
+    }else if($('#Payment-mode').val() == 'PPD'){
+      $('#cod-amount').removeClass('d-block').addClass('d-none')
+    };
+
+
+
+
+  $('#Payment-mode').on('change', function() {
+    if(this.value == 'COD'){
+      $('#cod-amount').removeClass('d-none').addClass('d-block')
+
+    }else if(this.value == 'PPD'){
+      $('#cod-amount').removeClass('d-block').addClass('d-none')
+    };
+});
+</script>    
+    {% endblock js %}
